@@ -1,17 +1,11 @@
 import { Router } from "express";
-import {
-    getAllDocuments,
-    getDocumentById,
-    updateDocument,
-    deleteDocument
-} from "../repositories/document.repository.js";
-import { createDocument } from "../controllers/document.controller.js";
+import { createDocument, findAllDocuments, findDocumentById, updateDocument, deleteDocument } from "../controllers/document.controller.js";
 
 const documentRouter = Router();
 
-documentRouter.get('/', getAllDocuments);
+documentRouter.get('/', findAllDocuments);
 documentRouter.post('/', createDocument);
-documentRouter.get('/:id', getDocumentById);
+documentRouter.get('/:id', findDocumentById);
 documentRouter.put('/:id', updateDocument);
 documentRouter.delete('/:id', deleteDocument);
 

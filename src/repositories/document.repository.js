@@ -9,7 +9,11 @@ export async function getAllDocuments() {
 }
 
 export async function getDocumentById(id) {
-    return await Document.findById(id);
+    const document = await Document.findById(id);
+    if (!document) {
+        return null;
+    }
+    return document;
 }
 
 export async function deleteDocument(id) {
@@ -17,5 +21,5 @@ export async function deleteDocument(id) {
 }
 
 export async function updateDocument(id, data) {
-    return await Document.findByIdAndUpdate(id, data);
+    return await Document.findByIdAndUpdate(id, data, { new: true });
 }
