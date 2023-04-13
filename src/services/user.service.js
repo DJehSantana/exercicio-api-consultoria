@@ -4,7 +4,8 @@ export async function save(data) {
     const user = await postUser({
         user: data.user,
         login: data.login,
-        password: data.password
+        password: data.password,
+        token: null
     });
 
     return user;

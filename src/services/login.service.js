@@ -1,11 +1,15 @@
 import { findUserByEmail } from './user.service.js';
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export async function loginAuthentication(login, password) {
     const user = await findUserByEmail(login);
-    console.log(user);
     if (user.password != password) {
         throw new Error('Invalid password or login');
     }
-    const response = `Bem vindo ${user.user}`;
-    return response;
+    const token = jwt.sign({ id: user.id }, process.env.CHAVE_JWT);
+    user.token = token;
+    return (user);
 }
