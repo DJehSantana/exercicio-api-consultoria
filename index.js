@@ -4,6 +4,7 @@ import cors from 'cors';
 import { documentRouter } from "./src/routes/document.route.js";
 import { logger } from "./src/middlewares/logger.js";
 import mongoose from "mongoose";
+import { userRouter } from "./src/routes/user.route.js";
 
 dotenv.config();
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/document', documentRouter);
+app.use('/user', userRouter);
 
 app.use((error, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${error.message}`);
