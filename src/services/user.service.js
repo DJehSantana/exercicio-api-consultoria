@@ -1,4 +1,4 @@
-import { getUser, postUser } from '../repositories/user.repository.js';
+import { getUser, getUserByEmail, postUser } from '../repositories/user.repository.js';
 
 export async function save(data) {
     const user = await postUser({
@@ -21,8 +21,8 @@ export async function findUser(id) {
     return user;
 }
 
-export async function findUserByEmail(login, password) {
-    if (!login || !password) {
+export async function findUserByEmail(login) {
+    if (!login) {
         throw new Error('Invalid or empty fields');
     }
     const user = await getUserByEmail(login);
