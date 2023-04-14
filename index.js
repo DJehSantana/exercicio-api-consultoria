@@ -3,8 +3,14 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { documentRouter } from "./src/routes/document.route.js";
 import { logger } from "./src/middlewares/logger.js";
+
 import connectDatabase from "./src/db/connection.mongodb.js";
 // import mongoose from "mongoose";
+
+import mongoose from "mongoose";
+import { userRouter } from "./src/routes/user.route.js";
+import { loginRouter } from "./src/routes/login.route.js";
+
 
 dotenv.config();
 const app = express();
@@ -24,6 +30,8 @@ app.use(cors());
 connectDatabase();
 
 app.use('/document', documentRouter);
+app.use('/user', userRouter);
+app.use('/login', loginRouter);
 
 app.use((error, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${error.message}`);

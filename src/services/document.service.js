@@ -1,4 +1,4 @@
-import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument } from "../repositories/document.repository.js";
+import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument, findDocumentsForDueDate } from "../repositories/document.repository.js";
 
 export async function save(data) {
     const document = await postDocument({
@@ -27,6 +27,20 @@ export async function getById(id) {
         throw new Error('Register not found!');
     }
     return document;
+}
+
+export async function getByDuoDate(dataVencimento) {
+    let dataFormatada;
+    if (typeof (dataVencimento) != Date) {
+        dataFormatada = new Date(dataVencimento);
+        console.log(dataFormatada);
+    }
+    const documents = await findDocumentsForDueDate(dataFormatada);
+    if (!documents) {
+        return null;
+    }
+    return documents;
+
 }
 
 export async function update(id, data) {
