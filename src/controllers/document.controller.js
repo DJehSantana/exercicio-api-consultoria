@@ -1,5 +1,5 @@
 import { logger } from "../middlewares/logger.js";
-import { deleteById, getAll, getByDuoDate, getById, save, update } from "../services/document.service.js";
+import { deleteById, getAll, getById, getByParams, save, update } from "../services/document.service.js";
 
 export async function createDocument(req, res, next) {
     try {
@@ -35,12 +35,11 @@ export async function findDocumentById(req, res, next) {
 
 export async function findDocumentsWithParams(req, res, next) {
     try {
-        const { data_vencimento } = req.query;
-        let documents
-        if (data_vencimento) {
-            console.log(typeof (data_vencimento));
-            documents = await getByDuoDate(data_vencimento);
-        }
+
+        const filter = req.query;
+
+         let documents = await getByParams(filter);
+
         if (documents) {
             res.status(200).json(documents);
             logger.info(`GET /document - ${JSON.stringify(documents)}`);
