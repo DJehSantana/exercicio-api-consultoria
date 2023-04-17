@@ -1,4 +1,4 @@
-import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument, findDocumentsForDueDate } from "../repositories/document.repository.js";
+import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument,  findDocumentsByParams } from "../repositories/document.repository.js";
 
 export async function save(data) {
     const document = await postDocument({
@@ -29,13 +29,24 @@ export async function getById(id) {
     return document;
 }
 
-export async function getByDuoDate(dataVencimento) {
-    let dataFormatada;
-    if (typeof (dataVencimento) != Date) {
-        dataFormatada = new Date(dataVencimento);
-        console.log(dataFormatada);
+export async function getByParams({data_vencimento, id_cliente, data_emissao}) {
+
+    let filter = {}
+    if (data_vencimento) {
+        filter.data_vencimento = { $lte: new Date(data_vencimento) }
     }
-    const documents = await findDocumentsForDueDate(dataFormatada);
+
+    if (data_emissao) {
+        filter.data_emissao = { $gte: new Date(data_emissao) }
+    }
+
+    if(id_cliente) {
+        filter.id_cliente =id_cliente
+    }
+
+    console.log('filters: ', filter)
+
+    const documents = await findDocumentsByParams(filter);
     if (!documents) {
         return null;
     }

@@ -1,5 +1,53 @@
-2023-04-17T18:51:12.479Z [pc-consultoria-api] info GET /document - success
-2023-04-17T18:52:37.146Z [pc-consultoria-api] info GET /document - success
-2023-04-17T18:54:28.344Z [pc-consultoria-api] info GET /document - success
-2023-04-17T18:55:32.677Z [pc-consultoria-api] info POST /document - {"classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2023-04-20T00:00:00.000Z","id_cliente":1,"_id":"643d9624a36f9116ab9efb90","__v":0}
-2023-04-17T18:55:47.278Z [pc-consultoria-api] info GET /document - success
+2023-04-16T15:54:56.587Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T15:55:20.422Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:03:52.275Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:03:57.408Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:05:32.826Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:06:11.290Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:06:14.077Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:07:33.258Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:09:30.244Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:09:46.459Z [pc-consultoria-api] info GET /document - success
+2023-04-16T16:09:55.397Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:11:14.482Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:12:03.800Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:12:35.782Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:12:42.739Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:13:58.623Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:14:01.186Z [pc-consultoria-api] error GET  - documents is not defined
+2023-04-16T16:14:49.926Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:14:51.710Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:15:31.096Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:15:34.985Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:15:38.783Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:30:59.589Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:31:03.130Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:32:03.153Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:32:06.126Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:34:36.060Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:35:01.088Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:35:06.732Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:35:44.215Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:35:45.720Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:35:54.161Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:35:58.863Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:41:00.675Z [pc-consultoria-api] error GET  - Model.find() no longer accepts a callback
+2023-04-16T16:41:02.777Z [pc-consultoria-api] error GET  - Model.find() no longer accepts a callback
+2023-04-16T16:46:48.805Z [pc-consultoria-api] error GET  - Cannot set properties of undefined (setting 'data_vencimento')
+2023-04-16T16:47:14.750Z [pc-consultoria-api] error GET  - Cannot set properties of undefined (setting 'data_vencimento')
+2023-04-16T16:48:59.215Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:49:03.548Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:49:30.433Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:49:33.617Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:49:42.596Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:50:54.983Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:50:57.018Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:54:04.420Z [pc-consultoria-api] error GET  - filter is not defined
+2023-04-16T16:54:05.820Z [pc-consultoria-api] error GET  - filter is not defined
+2023-04-16T16:54:28.277Z [pc-consultoria-api] error GET  - Operation `documents.find()` buffering timed out after 10000ms
+2023-04-16T16:54:30.264Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:57:15.102Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:58:13.065Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:58:29.906Z [pc-consultoria-api] info GET /document - []
+2023-04-16T16:58:39.253Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
+2023-04-16T16:58:57.893Z [pc-consultoria-api] info GET /document - [{"_id":"6434a99fdcc0b245ac14feb8","classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2031-08-12T00:00:00.000Z","id_cliente":1,"__v":0}]
