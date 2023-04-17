@@ -1,0 +1,5 @@
+2023-04-17T18:51:12.479Z [pc-consultoria-api] info GET /document - success
+2023-04-17T18:52:37.146Z [pc-consultoria-api] info GET /document - success
+2023-04-17T18:54:28.344Z [pc-consultoria-api] info GET /document - success
+2023-04-17T18:55:32.677Z [pc-consultoria-api] info POST /document - {"classe":"Classe3","modalidade":"M1-C2","processo_adm":"1234/321","municipio":"Céu Azul","data_emissao":"2021-08-12T00:00:00.000Z","data_vencimento":"2023-04-20T00:00:00.000Z","id_cliente":1,"_id":"643d9624a36f9116ab9efb90","__v":0}
+2023-04-17T18:55:47.278Z [pc-consultoria-api] info GET /document - success

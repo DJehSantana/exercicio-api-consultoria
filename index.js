@@ -10,7 +10,7 @@ import connectDatabase from "./src/db/connection.mongodb.js";
 import { userRouter } from "./src/routes/user.route.js";
 import { loginRouter } from "./src/routes/login.route.js";
 import schedule from 'node-schedule'
-import {job} from "./src/services/schedule.js";
+import {findDueDocuments} from "./src/services/schedule.js";
 
 dotenv.config();
 const app = express();
@@ -29,9 +29,12 @@ app.use(cors());
 
 connectDatabase();
 
-// schedule.scheduleJob('1 * * * * *', async () => {
-//     job()
-// })
+//'seg min hora dia mes dia-da-semana'
+// ex.: '1 * * * * *' todo minuto e 1 segundo
+// ex.: '* * 9 * * *' todo dia as 9h
+schedule.scheduleJob('1 * * * * *', async () => {
+    findDueDocuments()
+})
 
 
 app.use('/document', documentRouter);
