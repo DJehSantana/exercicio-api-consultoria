@@ -44,7 +44,7 @@ export async function getByParams({data_vencimento, id_cliente, data_emissao}) {
         filter.id_cliente =id_cliente
     }
 
-    console.log(filter)
+    console.log('filters: ', filter)
 
     const documents = await findDocumentsByParams(filter);
     if (!documents) {
