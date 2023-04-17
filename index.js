@@ -7,10 +7,10 @@ import { logger } from "./src/middlewares/logger.js";
 import connectDatabase from "./src/db/connection.mongodb.js";
 // import mongoose from "mongoose";
 
-import mongoose from "mongoose";
 import { userRouter } from "./src/routes/user.route.js";
 import { loginRouter } from "./src/routes/login.route.js";
-
+import schedule from 'node-schedule'
+import {job} from "./src/services/schedule.js";
 
 dotenv.config();
 const app = express();
@@ -28,6 +28,11 @@ app.use(express.json());
 app.use(cors());
 
 connectDatabase();
+
+// schedule.scheduleJob('1 * * * * *', async () => {
+//     job()
+// })
+
 
 app.use('/document', documentRouter);
 app.use('/user', userRouter);
