@@ -5,7 +5,6 @@ import { documentRouter } from "./src/routes/document.route.js";
 import { logger } from "./src/middlewares/logger.js";
 
 import connectDatabase from "./src/db/connection.mongodb.js";
-// import mongoose from "mongoose";
 
 import { userRouter } from "./src/routes/user.route.js";
 import { loginRouter } from "./src/routes/login.route.js";
@@ -15,14 +14,6 @@ import {findDueDocuments} from "./src/services/schedule.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3002;
-// const uri = process.env.MONGODB;
-
-// mongoose.connect(uri, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }).then(() => console.log('Conectado ao MongoDB...'))
-//     .catch(err => console.error('Não foi possível conectar ao MongoDB...', err
-//     ));
 
 app.use(express.json());
 app.use(cors());

@@ -1,4 +1,4 @@
-import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument,  findDocumentsByParams } from "../repositories/document.repository.js";
+import { postDocument, getAllDocuments, getDocumentById, updateDocument, deleteDocument,  findDocumentsByParams, uploadDocumentRepository, downloadDocumentRepository } from "../repositories/document.repository.js";
 
 export async function save(data) {
     const document = await postDocument({
@@ -71,3 +71,26 @@ export async function deleteById(id) {
     }
     return await deleteDocument(id);
 }
+
+export async function uploadService(data) {
+  const document = await uploadDocumentRepository({
+    name: data.originalname,
+    size: data.size,
+    key: data.key,
+    url: data.location,
+  });
+
+  return document;
+}
+
+export async function downloadService(id) {
+  if (!id) {
+    throw new Error("Invalid id!");
+  }
+  const document = await downloadDocumentRepository(id);
+  if (!document) {
+    throw new Error("Register not found!");
+  }
+  return document;
+}
+;
