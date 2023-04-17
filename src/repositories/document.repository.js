@@ -24,7 +24,9 @@ export async function updateDocument(id, data) {
     return await Document.findByIdAndUpdate(id, data, { new: true });
 }
 
-export async function findDocumentsForDueDate(dataVencimento) {
-    const documents = await Document.find({ data_vencimento: { $lte: dataVencimento } });
+
+export async function findDocumentsByParams(filter) {
+    const documents = await Document.find(filter)
+
     return documents;
 }
